@@ -3,11 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Áreas de Atuação - Dra. Neuza Alves - Advocacia</title>
+    <title>Contato - Dra. Neuza Alves - Advocacia</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+            <link rel="shortcut icon" type="image/jpg" href="logosempgn.png"/>
+  
     <style>
         :root {
             --black: #0a0a0a;
@@ -77,12 +79,12 @@
         .logo {
             display: flex;
             align-items: center;
-            height: 60px;
+            height: 60px; /* Altura fixa para o logo */
         }
 
         .logo-img {
-            height: 100%;
-            width: auto;
+            height: 160px;
+            width: 190px;
             margin-right: 15px;
         }
 
@@ -105,7 +107,6 @@
             color: var(--light-gold);
             text-transform: uppercase;
         }
-
         nav ul {
             display: flex;
             list-style: none;
@@ -154,8 +155,8 @@
             z-index: 1001;
         }
 
-        /* Hero Section para Áreas de Atuação */
-        .practice-hero {
+        /* Hero Section para Contato */
+        .contact-hero {
             height: 60vh;
             min-height: 500px;
             position: relative;
@@ -165,7 +166,7 @@
             margin-top: 80px;
         }
 
-        .practice-hero-bg {
+        .contact-hero-bg {
             position: absolute;
             top: 0;
             left: 0;
@@ -176,7 +177,7 @@
             z-index: -1;
         }
 
-        .practice-hero-bg::after {
+        .contact-hero-bg::after {
             content: '';
             position: absolute;
             top: 0;
@@ -186,7 +187,7 @@
             background: linear-gradient(45deg, rgba(10, 10, 10, 0.9) 0%, rgba(10, 10, 10, 0.6) 100%);
         }
 
-        .practice-hero-content {
+        .contact-hero-content {
             position: relative;
             z-index: 2;
             max-width: 800px;
@@ -195,14 +196,14 @@
             animation: fadeInUp 1.2s 0.8s forwards;
         }
 
-        .practice-hero h1 {
+        .contact-hero h1 {
             font-size: 4rem;
             margin-bottom: 20px;
             line-height: 1.1;
             color: var(--gold);
         }
 
-        .practice-hero p {
+        .contact-hero p {
             font-size: 1.2rem;
             margin-bottom: 40px;
             max-width: 600px;
@@ -210,207 +211,209 @@
             opacity: 0.9;
         }
 
-        /* Seção de Áreas de Atuação */
-        .practice-areas {
+        /* Seção de Contato Principal */
+        .contact-main {
             padding: 120px 0;
             position: relative;
         }
 
-        .section-header {
-            text-align: center;
-            margin-bottom: 80px;
+        .contact-container {
+            display: flex;
+            gap: 60px;
         }
 
-        .section-header h2 {
-            font-size: 3rem;
-            margin-bottom: 20px;
-            position: relative;
-            display: inline-block;
+        .contact-info {
+            flex: 1;
+            min-width: 400px;
         }
 
-        .section-header h2::after {
-            content: '';
-            position: absolute;
-            width: 80px;
-            height: 2px;
+        .contact-info h2 {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            color: var(--gold);
+        }
+
+        .contact-info p {
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 40px;
+        }
+
+        .contact-method {
+            display: flex;
+            margin-bottom: 30px;
+        }
+
+        .contact-icon {
+            width: 60px;
+            height: 60px;
+            background: rgba(197, 160, 89, 0.1);
+            border: 1px solid rgba(197, 160, 89, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: var(--gold);
+            margin-right: 20px;
+            transition: var(--transition);
+        }
+
+        .contact-method:hover .contact-icon {
             background: var(--gold);
-            bottom: -15px;
-            left: 50%;
-            transform: translateX(-50%);
+            color: var(--black);
         }
 
-        .section-header p {
-            max-width: 700px;
-            margin: 0 auto;
-            font-size: 1.1rem;
+        .contact-details h3 {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
             color: var(--light-gold);
         }
 
-        .areas-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 40px;
+        .contact-details a {
+            transition: var(--transition);
         }
 
-        .area-card {
+        .contact-details a:hover {
+            color: var(--gold);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 50px;
+        }
+
+        .social-links a {
+            width: 50px;
+            height: 50px;
+            border: 1px solid rgba(197, 160, 89, 0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+            color: var(--gold);
+            transition: var(--transition);
+        }
+
+        .social-links a:hover {
+            background: var(--gold);
+            color: var(--black);
+            transform: translateY(-5px);
+        }
+
+        .contact-form-container {
+            flex: 1;
+            min-width: 400px;
+        }
+
+        .contact-form {
             background: rgba(10, 10, 10, 0.7);
             border: 1px solid rgba(197, 160, 89, 0.1);
-            padding: 50px 40px;
+            padding: 50px;
+            transition: var(--transition);
+        }
+
+        .contact-form:hover {
+            border-color: rgba(197, 160, 89, 0.3);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 10px;
+            color: var(--light-gold);
+            font-weight: 500;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(197, 160, 89, 0.2);
+            color: var(--white);
+            font-size: 1rem;
+            transition: var(--transition);
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: var(--gold);
+            background: rgba(197, 160, 89, 0.05);
+        }
+
+        .form-group textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 18px 45px;
+            background: transparent;
+            color: var(--gold);
+            border: 1px solid var(--gold);
+            font-size: 0.9rem;
+            font-weight: 500;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            cursor: pointer;
             transition: var(--transition);
             position: relative;
             overflow: hidden;
         }
 
-        .area-card::before {
+        .btn::before {
             content: '';
             position: absolute;
             top: 0;
             left: 0;
-            width: 3px;
-            height: 0;
+            width: 0;
+            height: 100%;
             background: var(--gold);
             transition: var(--transition);
+            z-index: -1;
         }
 
-        .area-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-            border-color: rgba(197, 160, 89, 0.3);
+        .btn:hover {
+            color: var(--black);
         }
 
-        .area-card:hover::before {
+        .btn:hover::before {
+            width: 100%;
+        }
+
+        /* Seção do Mapa */
+        .map-section {
+            padding: 0 0 120px;
+        }
+
+        .map-container {
+            height: 500px;
+            position: relative;
+        }
+
+        .map-container iframe {
+            width: 100%;
             height: 100%;
+            border: none;
+            filter: grayscale(100%) contrast(90%) brightness(70%);
         }
 
-        .area-icon {
-            font-size: 2.5rem;
-            color: var(--gold);
-            margin-bottom: 25px;
-        }
-
-        .area-card h3 {
-            font-size: 1.8rem;
-            margin-bottom: 20px;
-            color: var(--gold);
-        }
-
-        .area-card p {
-            color: rgba(255, 255, 255, 0.7);
-            margin-bottom: 25px;
-        }
-
-        .area-services {
-            margin-top: 30px;
-        }
-
-        .area-services h4 {
-            font-size: 1.1rem;
-            color: var(--light-gold);
-            margin-bottom: 15px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        .services-list {
-            list-style: none;
-        }
-
-        .services-list li {
-            margin-bottom: 10px;
-            position: relative;
-            padding-left: 20px;
-        }
-
-        .services-list li::before {
-            content: '';
-            position: absolute;
-            left: 0;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 8px;
-            height: 8px;
-            background: var(--gold);
-            border-radius: 50%;
-        }
-
-        /* Seção de Abordagem */
-        .approach-section {
-            padding: 100px 0;
-            background: rgba(10, 10, 10, 0.7);
-            position: relative;
-        }
-
-        .approach-section::before {
-            content: '';
+        .map-overlay {
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background: url('https://images.unsplash.com/photo-1450101499163-c8848c66ca85?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center;
-            background-size: cover;
-            z-index: -1;
-            opacity: 0.1;
-        }
-
-        .approach-container {
-            display: flex;
-            align-items: center;
-            gap: 60px;
-        }
-
-        .approach-image {
-            flex: 1;
-            min-width: 400px;
-            position: relative;
-        }
-
-        .approach-image img {
-            width: 100%;
-            height: 500px;
-            object-fit: cover;
-            object-position: center;
-            border: 15px solid rgba(197, 160, 89, 0.1);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-        }
-
-        .approach-content {
-            flex: 1;
-            min-width: 400px;
-        }
-
-        .approach-content h2 {
-            font-size: 2.5rem;
-            margin-bottom: 30px;
-            color: var(--gold);
-        }
-
-        .approach-content p {
-            margin-bottom: 25px;
-            color: rgba(255, 255, 255, 0.8);
-        }
-
-        .approach-list {
-            margin-top: 40px;
-        }
-
-        .approach-item {
-            display: flex;
-            margin-bottom: 30px;
-        }
-
-        .approach-number {
-            font-size: 2rem;
-            color: var(--gold);
-            margin-right: 20px;
-            font-family: 'Cormorant Garamond', serif;
-            min-width: 50px;
-        }
-
-        .approach-text h3 {
-            font-size: 1.3rem;
-            margin-bottom: 10px;
-            color: var(--light-gold);
+            background: linear-gradient(45deg, rgba(10, 10, 10, 0.3) 0%, rgba(10, 10, 10, 0.1) 100%);
+            pointer-events: none;
         }
 
         /* Rodapé Luxuoso */
@@ -497,24 +500,24 @@
             opacity: 1;
         }
 
-        .contact-info {
+        .footer-contact-info {
             margin-bottom: 25px;
             display: flex;
             align-items: flex-start;
         }
 
-        .contact-info i {
+        .footer-contact-info i {
             color: var(--gold);
             margin-right: 15px;
             margin-top: 5px;
         }
 
-        .social-links {
+        .footer-social-links {
             display: flex;
             gap: 15px;
         }
 
-        .social-links a {
+        .footer-social-links a {
             display: flex;
             align-items: center;
             justify-content: center;
@@ -525,7 +528,7 @@
             transition: var(--transition);
         }
 
-        .social-links a:hover {
+        .footer-social-links a:hover {
             background: var(--gold);
             color: var(--black);
             transform: translateY(-5px);
@@ -580,34 +583,30 @@
 
         /* Responsividade */
         @media (max-width: 1200px) {
-            .practice-hero h1 {
+            .contact-hero h1 {
                 font-size: 3.5rem;
             }
             
-            .approach-container {
+            .contact-container {
                 gap: 40px;
             }
         }
 
         @media (max-width: 992px) {
-            .practice-hero h1 {
+            .contact-hero h1 {
                 font-size: 3rem;
             }
             
-            .section-header h2 {
-                font-size: 2.5rem;
-            }
-            
-            .approach-container {
+            .contact-container {
                 flex-direction: column;
             }
             
-            .approach-image, .approach-content {
+            .contact-info, .contact-form-container {
                 min-width: 100%;
             }
             
-            .approach-image img {
-                height: 400px;
+            .contact-form {
+                padding: 40px;
             }
         }
 
@@ -656,40 +655,38 @@
                 font-size: 0.6rem;
             }
 
-            .practice-hero {
+            .contact-hero {
                 min-height: 400px;
                 margin-top: 70px;
             }
             
-            .practice-hero h1 {
+            .contact-hero h1 {
                 font-size: 2.5rem;
             }
             
-            .areas-grid {
-                grid-template-columns: 1fr;
+            .contact-info h2 {
+                font-size: 2rem;
             }
             
-            .section-header h2 {
-                font-size: 2.2rem;
+            .map-container {
+                height: 400px;
             }
         }
 
         @media (max-width: 576px) {
-            .practice-hero h1 {
+            .contact-hero h1 {
                 font-size: 2rem;
             }
             
-            .area-card {
-                padding: 40px 30px;
+            .contact-form {
+                padding: 30px;
             }
             
-            .approach-image img {
-                height: 300px;
-                border-width: 10px;
-            }
-            
-            .section-header h2 {
-                font-size: 1.8rem;
+            .contact-icon {
+                width: 50px;
+                height: 50px;
+                font-size: 1.3rem;
+                margin-right: 15px;
             }
             
             .whatsapp-btn {
@@ -703,14 +700,13 @@
     </style>
 </head>
 <body>
-    <!-- Header Luxuoso com Logo -->
+     <!-- Header Luxuoso com Logo -->
     <header id="header">
         <div class="container header-container">
             <a href="index.html" class="logo">
                 <img src="logo1.png" alt="Neuza Alves Advocacia" class="logo-img">
                 <div class="logo-text">
-                    <h1>Neuza Alves</h1>
-                    <p>Advocacia & Consultoria</p>
+                   
                 </div>
             </a>
             
@@ -729,195 +725,123 @@
         </div>
     </header>
 
-    <!-- Hero Section para Áreas de Atuação -->
-    <section class="practice-hero">
-        <div class="practice-hero-bg"></div>
+    <!-- Hero Section para Contato -->
+    <section class="contact-hero">
+        <div class="contact-hero-bg"></div>
         <div class="container">
-            <div class="practice-hero-content">
-                <h1>Áreas de Atuação</h1>
-                <p>Especialização e excelência em diversas áreas do Direito, oferecendo soluções jurídicas personalizadas para cada caso.</p>
+            <div class="contact-hero-content">
+                <h1>Entre em Contato</h1>
+                <p>Estamos prontos para atender suas necessidades jurídicas com excelência e comprometimento.</p>
             </div>
         </div>
     </section>
 
-    <!-- Seção de Áreas de Atuação -->
-    <section class="practice-areas">
+    <!-- Seção de Contato Principal -->
+    <section class="contact-main">
         <div class="container">
-            <div class="section-header">
-                <h2>Nossas Especialidades</h2>
-                <p>Atuação estratégica e dedicada em diversas áreas do Direito</p>
-            </div>
-            
-            <div class="areas-grid">
-                <!-- Direito Civil -->
-                <div class="area-card">
-                    <div class="area-icon">
-                        <i class="fas fa-balance-scale"></i>
-                    </div>
-                    <h3>Direito Civil</h3>
-                    <p>Atuação abrangente nas relações jurídicas entre particulares, protegendo direitos e garantindo o cumprimento de obrigações.</p>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h2>Fale Conosco</h2>
+                    <p>O escritório da Dra. Neuza Alves está sempre disponível para esclarecer dúvidas e oferecer orientação jurídica personalizada.</p>
                     
-                    <div class="area-services">
-                        <h4>Principais Serviços:</h4>
-                        <ul class="services-list">
-                            <li>Ações de indenização</li>
-                            <li>Responsabilidade civil</li>
-                            <li>Contratos e obrigações</li>
-                            <li>Direitos do consumidor</li>
-                            <li>Usucapião</li>
-                        </ul>
+                    <div class="contact-method">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Telefone</h3>
+                            <a href="tel:849999077935">(84) 99907-7935</a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-method">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Email</h3>
+                            <a href="mailto:neuzalvez.adv@gmail.com">neuzalvez.adv@gmail.com</a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-method">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Escritório</h3>
+                            <span>Av. Senador Salgado Filho, 0000 - Sala 000<br>Lagoa Nova, Natal - RN<br>CEP: 59000-000</span>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-method">
+                        <div class="contact-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Horário de Atendimento</h3>
+                            <span>Segunda a Sexta: 8h às 18h<br>Sábado: 8h às 12h (com agendamento)</span>
+                        </div>
+                    </div>
+                    
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
                     </div>
                 </div>
                 
-                <!-- Direito de Família -->
-                <div class="area-card">
-                    <div class="area-icon">
-                        <i class="fas fa-users"></i>
-                    </div>
-                    <h3>Direito de Família</h3>
-                    <p>Atendimento sensível e especializado nas questões familiares, buscando sempre a melhor solução para cada situação.</p>
-                    
-                    <div class="area-services">
-                        <h4>Principais Serviços:</h4>
-                        <ul class="services-list">
-                            <li>Divórcio e separação</li>
-                            <li>Guarda de filhos</li>
-                            <li>Pensão alimentícia</li>
-                            <li>Inventário e partilha de bens</li>
-                            <li>Adoção</li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <!-- Direito Imobiliário -->
-                <div class="area-card">
-                    <div class="area-icon">
-                        <i class="fas fa-home"></i>
-                    </div>
-                    <h3>Direito Imobiliário</h3>
-                    <p>Assessoria completa em negócios jurídicos envolvendo bens imóveis, desde a compra até a regularização.</p>
-                    
-                    <div class="area-services">
-                        <h4>Principais Serviços:</h4>
-                        <ul class="services-list">
-                            <li>Compra e venda de imóveis</li>
-                            <li>Regularização de propriedades</li>
-                            <li>Ações possessórias</li>
-                            <li>Condomínios</li>
-                            <li>Locação e despejo</li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <!-- Direito Trabalhista -->
-                <div class="area-card">
-                    <div class="area-icon">
-                        <i class="fas fa-briefcase"></i>
-                    </div>
-                    <h3>Direito Trabalhista</h3>
-                    <p>Defesa dos direitos trabalhistas tanto para empregados quanto empregadores, com foco em soluções eficientes.</p>
-                    
-                    <div class="area-services">
-                        <h4>Principais Serviços:</h4>
-                        <ul class="services-list">
-                            <li>Reclamações trabalhistas</li>
-                            <li>Rescisão contratual</li>
-                            <li>Assédio moral</li>
-                            <li>Horas extras não pagas</li>
-                            <li>Acidentes de trabalho</li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <!-- Direito Penal -->
-                <div class="area-card">
-                    <div class="area-icon">
-                        <i class="fas fa-gavel"></i>
-                    </div>
-                    <h3>Direito Penal</h3>
-                    <p>Defesa técnica em processos criminais, garantindo o amplo direito de defesa e o respeito às garantias constitucionais.</p>
-                    
-                    <div class="area-services">
-                        <h4>Principais Serviços:</h4>
-                        <ul class="services-list">
-                            <li>Defesa em processos criminais</li>
-                            <li>Habeas corpus</li>
-                            <li>Liberdade provisória</li>
-                            <li>Recursos criminais</li>
-                            <li>Acompanhamento em delegacias</li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <!-- Consultoria Jurídica -->
-                <div class="area-card">
-                    <div class="area-icon">
-                        <i class="fas fa-landmark"></i>
-                    </div>
-                    <h3>Consultoria Jurídica</h3>
-                    <p>Orientação preventiva para pessoas e empresas, evitando litígios e garantindo segurança nas relações jurídicas.</p>
-                    
-                    <div class="area-services">
-                        <h4>Principais Serviços:</h4>
-                        <ul class="services-list">
-                            <li>Análise de contratos</li>
-                            <li>Due diligence</li>
-                            <li>Assessoria preventiva</li>
-                            <li>Pareceres jurídicos</li>
-                            <li>Compliance</li>
-                        </ul>
+                <div class="contact-form-container">
+                    <div class="contact-form">
+                        <form id="contactForm">
+                            <div class="form-group">
+                                <label for="name">Nome Completo</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="phone">Telefone</label>
+                                <input type="tel" id="phone" name="phone" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="subject">Assunto</label>
+                                <select id="subject" name="subject" required>
+                                    <option value="" disabled selected>Selecione um assunto</option>
+                                    <option value="consulta">Consulta Jurídica</option>
+                                    <option value="civil">Direito Civil</option>
+                                    <option value="familia">Direito de Família</option>
+                                    <option value="imobiliario">Direito Imobiliário</option>
+                                    <option value="trabalhista">Direito Trabalhista</option>
+                                    <option value="outro">Outro</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="message">Mensagem</label>
+                                <textarea id="message" name="message" required></textarea>
+                            </div>
+                            
+                            <button type="submit" class="btn">Enviar Mensagem</button>
+                        </form>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Seção de Abordagem -->
-    <section class="approach-section">
+    <!-- Seção do Mapa -->
+    <section class="map-section">
         <div class="container">
-            <div class="approach-container">
-                <div class="approach-image">
-                    <img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Abordagem Jurídica">
-                </div>
-                
-                <div class="approach-content">
-                    <h2>Nossa Abordagem</h2>
-                    <p>No escritório da Dra. Neuza Alves, cada caso é tratado com a atenção e dedicação que merece, seguindo uma metodologia clara e eficiente.</p>
-                    
-                    <div class="approach-list">
-                        <div class="approach-item">
-                            <div class="approach-number">1</div>
-                            <div class="approach-text">
-                                <h3>Análise Detalhada</h3>
-                                <p>Estudo aprofundado de cada caso para identificar a melhor estratégia jurídica.</p>
-                            </div>
-                        </div>
-                        
-                        <div class="approach-item">
-                            <div class="approach-number">2</div>
-                            <div class="approach-text">
-                                <h3>Planejamento Estratégico</h3>
-                                <p>Desenvolvimento de um plano de ação personalizado para cada cliente.</p>
-                            </div>
-                        </div>
-                        
-                        <div class="approach-item">
-                            <div class="approach-number">3</div>
-                            <div class="approach-text">
-                                <h3>Atuação Especializada</h3>
-                                <p>Aplicação do conhecimento jurídico com excelência técnica e ética.</p>
-                            </div>
-                        </div>
-                        
-                        <div class="approach-item">
-                            <div class="approach-number">4</div>
-                            <div class="approach-text">
-                                <h3>Acompanhamento Personalizado</h3>
-                                <p>Atendimento próximo e transparente em todas as etapas do processo.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3969.258389712879!2d-35.20954598571478!3d-5.826132195769775!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNcKwNDknMzQuMSJTIDM1wrAxMiczMy4wIlc!5e0!3m2!1spt-BR!2sbr!4v1620000000000!5m2!1spt-BR!2sbr" allowfullscreen="" loading="lazy"></iframe>
+                <div class="map-overlay"></div>
             </div>
         </div>
     </section>
@@ -929,7 +853,7 @@
                 <div class="footer-col">
                     <h3>Escritório Neuza Alves</h3>
                     <p>Excelência jurídica com compromisso e ética, oferecendo soluções personalizadas para cada caso.</p>
-                    <div class="social-links">
+                    <div class="footer-social-links">
                         <a href="#"><i class="fab fa-facebook-f"></i></a>
                         <a href="#"><i class="fab fa-instagram"></i></a>
                         <a href="#"><i class="fab fa-linkedin-in"></i></a>
@@ -958,19 +882,19 @@
                 
                 <div class="footer-col">
                     <h3>Contato</h3>
-                    <div class="contact-info">
+                    <div class="footer-contact-info">
                         <i class="fas fa-phone-alt"></i>
                         <span>(84) 99907-7935</span>
                     </div>
-                    <div class="contact-info">
+                    <div class="footer-contact-info">
                         <i class="fas fa-envelope"></i>
                         <span>neuzalvez.adv@gmail.com</span>
                     </div>
-                    <div class="contact-info">
+                    <div class="footer-contact-info">
                         <i class="fas fa-map-marker-alt"></i>
                         <span>Natal/RN - Brasil</span>
                     </div>
-                    <div class="contact-info">
+                    <div class="footer-contact-info">
                         <i class="fas fa-id-card"></i>
                         <span>OAB/RN 23161</span>
                     </div>
@@ -1018,9 +942,47 @@
             }
         });
 
+        // Formulário de Contato
+        const contactForm = document.getElementById('contactForm');
+        
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Simulação de envio - substituir por código real
+            const formData = new FormData(contactForm);
+            const formValues = Object.fromEntries(formData.entries());
+            
+            console.log('Formulário enviado:', formValues);
+            
+            // Feedback ao usuário
+            alert('Mensagem enviada com sucesso! Entraremos em contato em breve.');
+            contactForm.reset();
+            
+            // Aqui você pode adicionar código para enviar os dados para um servidor
+            // Exemplo com Fetch API:
+            /*
+            fetch('seu-endpoint-aqui', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formValues),
+            })
+            .then(response => response.json())
+            .then(data => {
+                alert('Mensagem enviada com sucesso!');
+                contactForm.reset();
+            })
+            .catch(error => {
+                console.error('Erro:', error);
+                alert('Ocorreu um erro ao enviar a mensagem. Por favor, tente novamente.');
+            });
+            */
+        });
+
         // Animação ao scroll
         const animateOnScroll = function() {
-            const elements = document.querySelectorAll('.practice-hero-content, .area-card, .approach-image, .approach-content');
+            const elements = document.querySelectorAll('.contact-hero-content, .contact-method, .contact-form');
             const windowHeight = window.innerHeight;
             
             elements.forEach(element => {
@@ -1033,7 +995,7 @@
         };
 
         // Inicializa as animações
-        document.querySelectorAll('.practice-hero-content, .area-card, .approach-image, .approach-content').forEach(el => {
+        document.querySelectorAll('.contact-hero-content, .contact-method, .contact-form').forEach(el => {
             el.style.opacity = '0';
             el.style.transform = 'translateY(50px)';
             el.style.transition = 'all 0.8s ease-out';
