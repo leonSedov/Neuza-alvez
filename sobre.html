@@ -734,6 +734,79 @@
                 right: 30px;
             }
         }
+
+        /* Seção Nossa Equipe */
+        .team-section {
+            padding: 100px 0;
+            background: rgba(10, 10, 10, 0.7);
+        }
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
+        }
+        .team-card {
+            background: rgba(197, 160, 89, 0.05);
+            border: 1px solid rgba(197, 160, 89, 0.1);
+            padding: 40px 30px 30px 30px;
+            text-align: center;
+            border-radius: 12px;
+            transition: var(--transition);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+        }
+        .team-card:hover {
+            border-color: var(--gold);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.18);
+            transform: translateY(-8px);
+        }
+        .team-photo {
+            width: 110px;
+            height: 110px;
+            margin: 0 auto 25px auto;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 4px solid var(--gold);
+            background: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .team-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .team-card h3 {
+            color: var(--gold);
+            font-size: 1.3rem;
+            margin-bottom: 8px;
+            margin-top: 0;
+        }
+        .team-role {
+            display: block;
+            font-size: 0.95rem;
+            color: var(--light-gold);
+            margin-bottom: 15px;
+            font-weight: 500;
+            letter-spacing: 1px;
+        }
+        .team-card p {
+            color: rgba(255,255,255,0.75);
+            font-size: 1rem;
+        }
+        @media (max-width: 768px) {
+            .team-section {
+                padding: 60px 0;
+            }
+            .team-card {
+                padding: 30px 15px 20px 15px;
+            }
+            .team-photo {
+                width: 90px;
+                height: 90px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -778,7 +851,7 @@
         <div class="container">
             <div class="bio-container">
                 <div class="bio-image">
-                    <img src="neuzaPerfil.jpg" alt="Dra. Neuza Alves" class="bio-image-main">
+                    <img src="perfil.jpeg" alt="Dra. Neuza Alves" class="bio-image-main">
                     <div class="bio-image-decoration"></div>
                 </div>
                 
@@ -789,95 +862,41 @@
                     <p>Com mais de 15 anos de experiência no mercado jurídico, construiu uma carreira sólida baseada na ética, transparência e excelência no atendimento aos clientes.</p>
                     <p>Atuou em casos complexos e de grande relevância na região, sempre com foco na melhor estratégia jurídica para cada situação específica.</p>
                     <p>Membro ativa da OAB/RN, participa regularmente de congressos e eventos jurídicos para manter-se atualizada com as últimas mudanças na legislação.</p>
-                    <img src="https://via.placeholder.com/200x80/000000/C5A059?text=Assinatura" alt="Assinatura" class="signature">
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Seção de Formação -->
-    <section class="education-section">
+    <!-- Seção Nossa Equipe -->
+    <section class="team-section">
         <div class="container">
             <div class="section-header">
-                <h2>Formação Acadêmica</h2>
-                <p>Trajetória educacional e qualificações profissionais</p>
+                <h2>Nossa Equipe</h2>
+                <p>Conheça os profissionais que apoiam o escritório Neuza Alves com dedicação e excelência.</p>
             </div>
-            
-            <div class="education-timeline">
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <span class="timeline-year">2005</span>
-                        <h3>Graduação em Direito</h3>
-                        <p>Universidade Federal do Rio Grande do Norte - UFRN</p>
+            <div class="team-grid">
+                <div class="team-card">
+                    <div class="team-photo">
+                        <img src="acessora.jpeg" alt="Assessora" />
                     </div>
+                    <h3>Assessora</h3>
+                    <p>Responsável pelo suporte administrativo e atendimento aos clientes, garantindo agilidade e organização nos processos do escritório.</p>
                 </div>
-                
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <span class="timeline-year">2008</span>
-                        <h3>Especialização em Direito Civil</h3>
-                        <p>Pontifícia Universidade Católica - PUC/RS</p>
+                <div class="team-card">
+                    <div class="team-photo">
+                        <img src="perfilLeon.jpg" alt="Leon Sedov" />
                     </div>
+                    <h3>Leon Sedov</h3>
+                    <span class="team-role">Técnico em TI</span>
+                    <p>Especialista em tecnologia da informação, cuida da infraestrutura digital e segurança dos dados do escritório.</p>
                 </div>
-                
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <span class="timeline-year">2012</span>
-                        <h3>Especialização em Direito de Família</h3>
-                        <p>Instituto Brasileiro de Direito de Família - IBDFAM</p>
+                <div class="team-card">
+                    <div class="team-photo">
+                        <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Vitoria Camile" />
                     </div>
-                </div>
-                
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <span class="timeline-year">2015</span>
-                        <h3>Mestrado em Direito Privado</h3>
-                        <p>Universidade de São Paulo - USP</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Seção de Valores -->
-    <section class="values-section">
-        <div class="container">
-            <div class="section-header">
-                <h2>Valores Profissionais</h2>
-                <p>Princípios que guiam minha atuação jurídica</p>
-            </div>
-            
-            <div class="values-grid">
-                <div class="value-card">
-                    <div class="value-icon">
-                        <i class="fas fa-balance-scale"></i>
-                    </div>
-                    <h3>Ética</h3>
-                    <p>Atuação pautada nos mais altos padrões éticos profissionais, com absoluto respeito às normas e regulamentos.</p>
-                </div>
-                
-                <div class="value-card">
-                    <div class="value-icon">
-                        <i class="fas fa-hand-holding-heart"></i>
-                    </div>
-                    <h3>Humanização</h3>
-                    <p>Atendimento humanizado, compreendendo as necessidades individuais de cada cliente em seu contexto único.</p>
-                </div>
-                
-                <div class="value-card">
-                    <div class="value-icon">
-                        <i class="fas fa-bullseye"></i>
-                    </div>
-                    <h3>Excelência</h3>
-                    <p>Busca constante pela melhor solução jurídica, com estudo aprofundado de cada caso e atualização permanente.</p>
-                </div>
-                
-                <div class="value-card">
-                    <div class="value-icon">
-                        <i class="fas fa-lock"></i>
-                    </div>
-                    <h3>Confidencialidade</h3>
-                    <p>Total sigilo sobre as informações compartilhadas, garantindo a privacidade e segurança dos clientes.</p>
+                    <h3>Vitoria Camile</h3>
+                    <span class="team-role">Técnica em Marketing</span>
+                    <p>Responsável pelas estratégias de comunicação e marketing, promovendo a presença digital do escritório.</p>
                 </div>
             </div>
         </div>
